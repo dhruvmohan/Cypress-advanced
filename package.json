@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.5",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^13.6.2",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^2.0.1",
+    "esbuild": "^0.18.18",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0"
+  },
+  "scripts": {
+    "cypress:open": "cypress open",
+    "mochawersome:merge": "npx mochawesome-merge cypress/results/*.json > cypress/results/mochawesome-report/mochawesome.json && npx marge cypress/results/mochawesome-report/mochawesome.json -f report -o cypress/results/mochawesome-report --autoOpen=true",
+    "cy:run": "cypress run",
+    "cy:parallel": "cypress-parallel -s cy:run -t 2 -d cypress/e2e"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
+    "cypress-parallel": "^0.14.0", 
+    "cypress-real-events": "^1.11.0",
+    "lodash": "^4.17.21",
+    "node-xlsx": "https://bahnhub.tech.rz.db.de:443/artifactory/npm-remote-cache/node-xlsx/-/node-xlsx-0.23.0.tgz",
+    "selenium-webdriver": "^4.16.0"
+  }
+}
